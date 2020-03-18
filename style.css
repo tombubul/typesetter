@@ -1,0 +1,21 @@
+h1 {
+  font-size:1.1em;
+  font-style:italic;
+  font-family:georgia;
+}
+
+img:first-of-type { 
+  display:inline-block; font-size: 0; 
+  border:1px solid red;
+  vertical-align: middle;
+
+  margin-left:0px;
+}
+
+img { 
+  display:inline-block; font-size: 0; 
+  border:1px solid red;
+  vertical-align: top;
+
+  margin-left:-60px;
+}
