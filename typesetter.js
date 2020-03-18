@@ -19,12 +19,15 @@ function Print () {
     character.appendChild(textnode);
     */
 
-    newCharacter.setAttribute("id", characterValue )
-    newCharacter.setAttribute("style", "background-image: url('" + characterValue + ".png');" )
+    // newCharacter.setAttribute("id", characterValue )
+    // newCharacter.setAttribute("style", "background-image: url('" + characterValue + ".png');" )
 
-    document.getElementById("word").appendChild(newCharacter);
+    var div = document.getElementById('word')
+    div.insertAdjacentHTML('beforebegin', "<img src=" + characterValue + ".png>");
 
-    SetCharacterSize( printable[charCount] , charCount )
+    // document.getElementById("word").appendChild(newCharacter);
+
+    // SetCharacterSize( printable[charCount] , charCount )
   }
 }
 
@@ -34,24 +37,25 @@ function Print () {
   - update the char a min-width/min-height
   */
 
-function SetCharacterSize ( char , offsetMultiplier ) {
+// function SetCharacterSize ( char , offsetMultiplier ) {
 
-    var imageSrc = document.getElementById( char )
-      .style
-      .backgroundImage
-      .replace(/url\((['"])?(.*?)\1\)/gi, '$2')
-      .split(',')[0];
+//     var imageSrc = document.getElementById( char )
+//       .style
+//       .backgroundImage
+//       .replace(/url\((['"])?(.*?)\1\)/gi, '$2')
+//       .split(',')[0];
 
-    console.log("image source = " + imageSrc)
+//     console.log("image source = " + imageSrc)
 
-    var image = new Image()
-    image.src = imageSrc
+//     var image = new Image()
+//     image.src = imageSrc
 
-    var setSizes = document.getElementById ( char )
+//     var setSizes = document.getElementById ( char )
 
-    var marginOffset = offsetMultiplier * image.width * -0.10;
+//     var marginOffset = -60
+//     // var marginOffset = offsetMultiplier * image.width * -0.10;
 
-    // this is wrong/racey:
+//     // this is wrong/racey:
 
-    setSizes.setAttribute("style", "background-image: url('" +image.src+ "');min-width:"+image.width+";min-height:"+image.height+";z-index:"+offsetMultiplier+";margin-left:"+marginOffset+";" )
-}
+//     setSizes.setAttribute("style", "background-image: url('" +image.src+ "');min-width:"+image.width+";min-height:"+image.height+";z-index:"+offsetMultiplier+";margin-left:"+marginOffset+";" )
+// }
