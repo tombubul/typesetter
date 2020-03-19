@@ -6,7 +6,7 @@ h1 {
 
 img:first-of-type { 
   display:inline-block; font-size: 0; 
-  border:1px solid red;
+  /* border:1px solid red; */
   vertical-align: middle;
 
   margin-left:0px;
@@ -17,5 +17,5 @@ img {
   border:1px solid red;
   vertical-align: top;
 
-  margin-left:-60px;
+  margin-left:-40px;
 }
