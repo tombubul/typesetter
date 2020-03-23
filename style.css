@@ -1,21 +1,36 @@
+body {
+
+  padding:50px;
+}
+
+li.word {
+
+  margin:20 40px 0 40px;
+  display:inline-block;
+  /* border:1px solid green; */
+}
+
 h1 {
   font-size:1.1em;
   font-style:italic;
   font-family:georgia;
 }
 
-img:first-of-type { 
-  display:inline-block; font-size: 0; 
-  /* border:1px solid red; */
-  vertical-align: middle;
-
-  margin-left:0px;
+input {
+  display:block;
 }
 
 img { 
   display:inline-block; font-size: 0; 
-  border:1px solid red;
+  /* border:1px solid red; */
   vertical-align: top;
 
   margin-left:-40px;
+}
+
+div.item {
+
+  display:inline-block;
+  width:100px;
+  border:1px solid red;
 }

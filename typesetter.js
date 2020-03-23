@@ -1,20 +1,35 @@
-/*
-  - take a form input
-  - create a node with an id for each letter
-*/
+function Print( okay ) {
 
-function Print () { 
+  // get and define input
+  let print = document.getElementById("textinput").value.split(``)
+  let printlength = print.length
 
-  var word = document.getElementById("textinput").value
+  // define and clear the typeset
+  let typesetter = document.getElementById("typesetter")
 
-  let printable = word.split('')
-  let wordlength = printable.length
+  var type = "<li class='word'>"
+  var characterValue
 
-  for( charCount = 0; charCount < wordlength; charCount++ ) {
+  for( charCount = 0; charCount < printlength; charCount++ ) {
 
-    var newCharacter = document.createElement("li"); 
-    var characterValue = printable[charCount].toLowerCase()
-    var div = document.getElementById('word')
-    div.insertAdjacentHTML('beforebegin', "<img src=letterset2/" + characterValue + ".png>");
+    characterValue = print[charCount].toLowerCase()
+
+    // insert space and close the word, but disallow trailing spaces
+
+    if( characterValue == " " )
+    {
+
+      type += "</li><li class='word'>"
+    }
+
+    else {
+
+      type += "<img class=item src=letterset2/" + characterValue + ".png>";
+    }
   }
+
+  type += "</li>"
+
+  // close last word div
+  typesetter.innerHTML = type
 }
